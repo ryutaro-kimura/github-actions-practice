@@ -1,0 +1,13 @@
+name: Context dump
+
+on:
+  workflow_dispatch:
+
+jobs:
+  context-dump:
+    runs-on: ubuntu-latest
+    steps:
+      # コンテキスト `github` を出力するステップを書く
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
