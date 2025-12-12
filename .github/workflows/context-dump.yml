@@ -14,4 +14,4 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
 
       - name: Dump event prop in GitHub context
-        run: echo ${{ toJson(github.event) }}
+        run: echo "${{ toJson(github.event) }}"
